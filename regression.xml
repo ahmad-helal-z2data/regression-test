@@ -1,0 +1,9 @@
+<suite name="nopcommerce Regression suite">
+    <parameter name="browser" value="chrome"/>
+    <test name="Regression test">
+        <classes>
+            <class name="test.test1"/>
+            <class name="test.test2"/>
+        </classes>
+    </test>
+</suite>
