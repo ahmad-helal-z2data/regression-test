@@ -2,8 +2,9 @@
     <parameter name="browser" value="chrome"/>
     <test name="Regression test">
         <classes>
-            <class name="test.test1"/>
-            <class name="test.test2"/>
+            <class name="test.Class1"/>
+            <class name="test.Class2"/>
+            <class name="test.Class3"/>
         </classes>
     </test>
 </suite>

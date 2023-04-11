@@ -3,25 +3,25 @@ package test;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-public class test1 {
+public class Class3 {
     @Test
-    public void test1() {
+    public void Class3test1() {
         Assert.assertTrue(true);
     }
 
     @Test
-    public void test2() {
+    public void Class3test2() {
         Assert.assertTrue(true);
     }
 
     @Test()
-    public void test3() {
+    public void Class3est3() {
         Assert.assertTrue(true);
     }
 
     @Test
-    public void test4() {
+    public void Class3test4() {
         Assert.assertTrue(false);
-        System.out.println(":::::::: test 1 ::::::::");
+        System.out.println(":::::::: Failed Class3test4 ::::::::");
     }
 }
