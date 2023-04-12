@@ -5,6 +5,8 @@
             <class name="test.Class1"/>
             <class name="test.Class2"/>
             <class name="test.Class3"/>
+            <class name="test.Class4"/>
+            <class name="test.Class5"/>
         </classes>
     </test>
 </suite>
