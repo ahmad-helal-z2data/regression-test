@@ -21,7 +21,6 @@ public class Class5 {
 
     @Test()
     public void Class5test4() {
-        Assert.assertTrue(true);
-//        System.out.println(":::::::: Failed Class5test4 ::::::::");
+        Assert.assertTrue(false);
     }
 }

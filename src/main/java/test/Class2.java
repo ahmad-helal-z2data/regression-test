@@ -22,6 +22,6 @@ public class Class2 {
     @Test
     public void Class2test4() {
         Assert.assertTrue(true);
-//        System.out.println(":::::::: Failed Class2test4 ::::::::");
+//
     }
 }
