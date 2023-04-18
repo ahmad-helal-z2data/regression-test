@@ -16,12 +16,11 @@ public class Class2 {
 
     @Test
     public void Class2test3() {
-        Assert.assertTrue(true);
+        Assert.assertTrue(false);
     }
 
     @Test
     public void Class2test4() {
-        Assert.assertTrue(true);
-//
+        Assert.assertTrue(false);
     }
 }
