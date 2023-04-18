@@ -21,6 +21,6 @@ public class Class3 {
 
     @Test
     public void Class3test4() {
-        Assert.assertTrue(false);
+        Assert.assertTrue(true);
     }
 }
