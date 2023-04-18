@@ -7,7 +7,10 @@ import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
+import org.testng.ITest;
 import org.testng.Reporter;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.AfterTest;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 
@@ -18,8 +21,8 @@ public class Main3 {
 
     WebDriver driver = null;
 
-    @Test(description = "check user can search by PCN number")
-    public void Class1test1() throws IOException {
+    @Test()
+    public void Class_1_test_1() throws IOException {
         //setup
         WebDriverManager.chromedriver().setup();
         ChromeOptions options = new ChromeOptions();
@@ -40,5 +43,6 @@ public class Main3 {
         driver.close();
         softAssert.assertAll();
     }
+
 
 }

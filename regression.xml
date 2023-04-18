@@ -1,11 +1,17 @@
 <suite name="nopcommerce Regression suite">
     <parameter name="browser" value="chrome"/>
-    <listeners>
-        <listener class-name='iReporter.MyReporterListener'/>
-    </listeners>
+<!--    <listeners>-->
+<!--        <listener class-name='iReporter.MyReporterListener'/>-->
+<!--    </listeners>-->
+
+<!--    <listeners>-->
+<!--        <listener class-name="org.uncommons.reportng.HTMLReporter"/>-->
+<!--        <listener class-name="org.uncommons.reportng.JUnitXMLReporter"/>-->
+<!--    </listeners>-->
     <test name="Regression test">
         <classes>
-            <class name="test.Main3"/>
+            <class name="test.Class2"/>
+            <class name="test.Class3"/>
 
         </classes>
     </test>
