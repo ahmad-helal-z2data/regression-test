@@ -4,31 +4,17 @@
   <parameter name="browser" value="chrome"/>
   <test thread-count="5" name="Regression test(failed)" verbose="0">
     <classes>
-      <class name="test.Class1">
-        <methods>
-          <include name="Class1test1"/>
-        </methods>
-      </class> <!-- test.Class1 -->
-      <class name="test.Class4">
-        <methods>
-          <include name="Class4test4"/>
-        </methods>
-      </class> <!-- test.Class4 -->
-      <class name="test.Class6">
-        <methods>
-          <include name="Class6test4"/>
-        </methods>
-      </class> <!-- test.Class6 -->
       <class name="test.Class3">
         <methods>
           <include name="Class3test4"/>
         </methods>
       </class> <!-- test.Class3 -->
-      <class name="test.Class5">
+      <class name="test.Class2">
         <methods>
-          <include name="Class5test4"/>
+          <include name="Class2test4"/>
+          <include name="Class2test3"/>
         </methods>
-      </class> <!-- test.Class5 -->
+      </class> <!-- test.Class2 -->
     </classes>
   </test> <!-- Regression test(failed) -->
 </suite> <!-- Failed suite [nopcommerce Regression suite] -->

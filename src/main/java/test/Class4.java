@@ -5,22 +5,22 @@ import org.testng.annotations.Test;
 
 public class Class4 {
     @Test
-    public void Class4test1() {
+    public void Class_04_test_01() {
         Assert.assertTrue(true);
     }
 
     @Test
-    public void Class4test2() {
+    public void Class_04_test_02() {
         Assert.assertTrue(true);
     }
 
     @Test()
-    public void Class4est3() {
+    public void Class_04_test_03() {
         Assert.assertTrue(true);
     }
 
     @Test
-    public void Class4test4() {
+    public void Class_04_test_04() {
         Assert.assertTrue(false);
     }
 }

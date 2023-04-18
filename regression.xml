@@ -1,4 +1,4 @@
-<suite name="nopcommerce Regression suite">
+<suite name="z2 test Regression suite">
     <parameter name="browser" value="chrome"/>
 <!--    <listeners>-->
 <!--        <listener class-name='iReporter.MyReporterListener'/>-->
@@ -12,7 +12,7 @@
         <classes>
             <class name="test.Class2"/>
             <class name="test.Class3"/>
-
+            <class name="test.Class4"/>
         </classes>
     </test>
 </suite>
