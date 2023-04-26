@@ -8,6 +8,7 @@
         <outputRelativeToContentRoot value="true" />
         <module name="Z2" />
         <module name="testTest" />
+        <module name="regression test" />
       </profile>
     </annotationProcessing>
   </component>
