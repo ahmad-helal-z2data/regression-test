@@ -51,34 +51,36 @@
 
 
         <profile>
-            <id>smoke</id>
+            <id>smokeSC</id>
             <activation>
                 <activeByDefault>true</activeByDefault>
                 <property>
                     <name>environment</name>
-                    <value>smoke</value>
+                    <value>smokeSC</value>
                 </property>
             </activation>
             <properties>
-                <testNGSuite>smoke.xml</testNGSuite>
+                <testNGSuite>smokeSC.xml</testNGSuite>
             </properties>
         </profile>
 
 
         <profile>
-            <id>regression</id>
+            <id>regressionSC</id>
             <activation>
                 <activeByDefault>true</activeByDefault>
                 <property>
                     <name>environment</name>
-                    <value>regression</value>
+                    <value>regressionSC</value>
                 </property>
             </activation>
             <properties>
-                <testNGSuite>regression.xml</testNGSuite>
+                <testNGSuite>regressionSC.xml</testNGSuite>
             </properties>
         </profile>
     </profiles>
+
+
 
 
     <dependencies>

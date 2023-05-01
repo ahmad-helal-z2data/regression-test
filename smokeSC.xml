@@ -1,0 +1,14 @@
+<suite name="supply chain">
+    <test name="smoke test">
+        <groups>
+            <run>
+                <include name = "smoke"/>
+            </run>
+        </groups>
+        <classes>
+            <class name="test.Class2"/>
+            <class name="test.Class3"/>
+            <class name="test.Class4"/>
+        </classes>
+    </test>
+</suite>

@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite name="Failed suite [z2 test Regression suite]" verbose="0">
-  <parameter name="browser" value="chrome"/>
   <test thread-count="5" name="Regression test(failed)" verbose="0">
     <classes>
       <class name="test.Class3">
@@ -9,16 +8,16 @@
           <include name="Class_03_test_04"/>
         </methods>
       </class> <!-- test.Class3 -->
-      <class name="test.Class4">
-        <methods>
-          <include name="Class_04_test_04"/>
-        </methods>
-      </class> <!-- test.Class4 -->
       <class name="test.Class2">
         <methods>
           <include name="Class_02_test_04"/>
         </methods>
       </class> <!-- test.Class2 -->
+      <class name="test.Class4">
+        <methods>
+          <include name="Class_04_test_04"/>
+        </methods>
+      </class> <!-- test.Class4 -->
     </classes>
   </test> <!-- Regression test(failed) -->
 </suite> <!-- Failed suite [z2 test Regression suite] -->
