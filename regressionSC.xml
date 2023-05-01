@@ -1,0 +1,9 @@
+<suite name="supply chain">
+    <test name="regression test">
+        <classes>
+            <class name="test.Class2"/>
+            <class name="test.Class3"/>
+            <class name="test.Class4"/>
+        </classes>
+    </test>
+</suite>
