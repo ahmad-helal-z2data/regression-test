@@ -7,11 +7,16 @@ import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.Assert;
 
 import java.time.Duration;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.concurrent.TimeUnit;
 
+import static org.openqa.selenium.By.cssSelector;
 import static org.openqa.selenium.By.xpath;
+
 
 public class z2 {
 
@@ -47,26 +52,38 @@ public class z2 {
         catch (Exception e){}
 
 
-
-        // PCNs All
-        driver.navigate().to("https://test1.z2data.com/alerts/Parts/All?dType=5&sType=AllEvents");
-
+        //navigate no SC events dashboard
+//        driver.navigate().to("https://test1.z2data.com/alerts/SCRisk/scdashboard?dType=1&sType=PLM");
 
 
-
-        WebElement ele1 = driver.findElement(xpath("//*[@id=\"Suppliers3\"]"));
-        actions.moveToElement(ele1).click().build().perform();
-
-        WebElement ele2 = driver.findElement(xpath("//*[@id=\"z2-2cols-rightpanel\"]/all-parts-pcns/app-parts-pcns-switcher/div/app-pcn-container/div/div[1]/app-ddlfiltersv2/div[1]/div/div/div/div[1]/div[6]/div/div[2]/div[3]/label/span[1]"));
-        actions.moveToElement(ele2).click().build().perform();
+//        //navigate to SC all page
+//        driver.navigate().to("https://test1.z2data.com/alerts/SCRisk/AllEvents?dType=1&sType=PLM");
 
 
 
+        //navigate to dashboard page
+        driver.navigate().to("https://test1.z2data.com/alerts/SCRisk/scdashboard?dType=1&sType=PLM");
 
-        Thread.sleep(3000);
+        Thread.sleep(2000);
+
+        //click on tracker name in tracker table
+        driver.findElement(xpath("//*[@id=\"mainZ2TblId\"]/tbody/tr[1]/td[1]/app-z2redirecturlcomponent/a/span")).click();
+
+        List<String> windowTabs = new ArrayList<String>(driver.getWindowHandles());
+        if (windowTabs.size() > 1) {
+            driver.switchTo().window(windowTabs.get(1));
+            //handle popup message
+            try {
+                driver.switchTo().alert().accept();
+            } catch (Exception e) {/*no such exception*/}
+            driver.close();
+            driver.switchTo().window(windowTabs.get(0));
+            System.out.println("return true");
+        }
+        else
+            System.out.println("return false");
+
         driver.quit();
-
-
 
     }
 
