@@ -92,20 +92,26 @@ public class z2 {
         Thread.sleep(3000);
 
         //open event details
-        driver.findElement(By.xpath("//*[@id=\"z2-2cols-sub-2cols-right\"]/app-sc-dashboard-events/div/div[2]/events-card-view-listing/div/div/div/div[2]/div[2]")).click();
+        driver.findElement(By.xpath("//*[@id=\"z2-2cols-sub-2cols-right\"]/app-sc-dashboard-events/div/div[2]/events-card-view-listing/div/div/div/div[2]/div[2]/div[2]/div[1]/span")).click();
 
         //switch to the new tab
         ArrayList<String> tabs = new ArrayList<String> (driver.getWindowHandles());
         driver.switchTo().window(tabs.get(1));
 
-        driver.findElement(By.xpath("//*[@id=\"z2-2cols-sub-2cols-left\"]/div[1]/div[1]/div/div[3]/div[2]/country-plus-more/div/span")).click();
-        Thread.sleep(8000);
 
         tabs = new ArrayList<String> (driver.getWindowHandles());
-        driver.close();
-        driver.switchTo().window(tabs.get(0));
+        //list of all tabs id
+        List<String> windowTabs = new ArrayList<String>(driver.getWindowHandles());
+        //switch to next new tab
+        driver.switchTo().window(windowTabs.get(1));
+        //handle popup message
+        try {
+            driver.switchTo().alert().accept();
+        } catch (Exception e) {/*no such exception*/}
+        //check new tab window url
+        String newTabURL = driver.getCurrentUrl();
+        System.out.println("new tab url ::: "+newTabURL);
 
-        driver.findElement(By.xpath("//*[@id=\"z2-2cols-sub-2cols-right\"]/app-sc-dashboard-events/div/div[2]/events-card-view-listing/div/div/div/div[2]/div[2]/div[2]/div[3]/div[3]/div[2]/country-plus-more/div/span")).click();
         Thread.sleep(8000);
 
 
