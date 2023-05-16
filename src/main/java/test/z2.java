@@ -78,10 +78,6 @@ public class z2 {
 //        driver.navigate().to("https://test1.z2data.com/alerts/SCRisk/scdashboard?dType=1&sType=PLM");
 
 
-//        //navigate to SC all page
-//        driver.navigate().to("https://test1.z2data.com/alerts/SCRisk/AllEvents?dType=1&sType=PLM");
-
-
 
         //navigate to dashboard page
         driver.navigate().to("https://test1.z2data.com/alerts/SCRisk/scdashboard?dType=1&sType=PLM");
@@ -94,25 +90,16 @@ public class z2 {
         //open event details
         driver.findElement(By.xpath("//*[@id=\"z2-2cols-sub-2cols-right\"]/app-sc-dashboard-events/div/div[2]/events-card-view-listing/div/div/div/div[2]/div[2]/div[2]/div[1]/span")).click();
 
-        //switch to the new tab
-        ArrayList<String> tabs = new ArrayList<String> (driver.getWindowHandles());
-        driver.switchTo().window(tabs.get(1));
+        //navigate to SC all page
+        driver.navigate().to("https://test1.z2data.com/alerts/SCRisk/AllEvents?dType=1&sType=PLM");
 
-
-        tabs = new ArrayList<String> (driver.getWindowHandles());
-        //list of all tabs id
-        List<String> windowTabs = new ArrayList<String>(driver.getWindowHandles());
-        //switch to next new tab
-        driver.switchTo().window(windowTabs.get(1));
-        //handle popup message
-        try {
-            driver.switchTo().alert().accept();
-        } catch (Exception e) {/*no such exception*/}
-        //check new tab window url
-        String newTabURL = driver.getCurrentUrl();
-        System.out.println("new tab url ::: "+newTabURL);
-
+        actions.moveToElement(driver.findElement(xpath("\"//*[@id=\\\"Commodity5\\\"]\""))).click().build().perform();
+        actions.moveToElement(driver.findElement(xpath("\"//*[@id=\\\"chk_1commodity.commodity_Capacitor_5_0\\\"]\""))).click().build().perform();
         Thread.sleep(8000);
+
+        driver.findElement(xpath("//*[@id=\"z2-2cols-sub-2cols-left\"]/impact-cards/div/div[2]/div[3]/div")).click();
+        Thread.sleep(8000);
+
 
 
         driver.quit();
