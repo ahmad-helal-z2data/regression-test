@@ -3,11 +3,11 @@
         <packages>
             <package name="test"/>
         </packages>
-<!--        <classes>-->
-<!--            <class name="test.Class2"/>-->
-<!--            <class name="test.Class3"/>-->
+        <classes>
+            <class name="test.Class2"/>
+            <class name="test.Class3"/>
 <!--            <class name="test.Class4"/>-->
-<!--        </classes>-->
+        </classes>
     </test>
 </suite>
 

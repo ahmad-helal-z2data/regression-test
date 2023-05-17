@@ -89,13 +89,13 @@
         <dependency>
             <groupId>org.seleniumhq.selenium</groupId>
             <artifactId>selenium-java</artifactId>
-            <version>4.6.0</version>
+            <version>4.8.1</version>
         </dependency>
 
         <dependency>
             <groupId>org.testng</groupId>
             <artifactId>testng</artifactId>
-            <version>7.6.1</version>
+            <version>7.7.0</version>
             <scope>compile</scope>
         </dependency>
 
@@ -104,14 +104,14 @@
         <dependency>
             <groupId>com.aventstack</groupId>
             <artifactId>extentreports</artifactId>
-            <version>4.0.0</version>
+            <version>5.0.9</version>
         </dependency>
 
         <!-- https://mvnrepository.com/artifact/com.aventstack/klov-reporter -->
         <dependency>
             <groupId>com.aventstack</groupId>
             <artifactId>klov-reporter</artifactId>
-            <version>5.0.2</version>
+            <version>5.0.9</version>
         </dependency>
 
 

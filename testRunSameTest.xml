@@ -1,0 +1,17 @@
+<suite name="z2 test Regression suite">
+    <test name="page 1  test">
+        <parameter name="page" value="page 1" />
+        <classes>
+            <class name="test.Class2"/>
+            <class name="test.Class3"/>
+        </classes>
+    </test>
+
+    <test name="page 2 test">
+        <parameter name="page" value="page 2" />
+        <classes>
+            <class name="test.Class2"/>
+            <class name="test.Class3"/>
+        </classes>
+    </test>
+</suite>
