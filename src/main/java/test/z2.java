@@ -75,8 +75,7 @@ public class z2 {
 
 
 
-//        //navigate to SC all page
-//        driver.navigate().to("https://test1.z2data.com/alerts/SCRisk/AllEvents?dType=1&sType=PLM");
+
 
 
 
@@ -85,17 +84,21 @@ public class z2 {
 
         Thread.sleep(3000);
 
-        //open tracker new tab
-        driver.findElement(By.xpath("/html/body/app-root/div[3]/app-eventscontainer/div/div[2]/app-scto-events-dashboard/div/div[1]/app-sc-dashboard-trackers/div/div[2]/div/div[2]/div/app-z2-table/div/div/table/tbody/tr[1]/td[1]/app-z2redirecturlcomponent/a/span")).click();
-
-        //switch to new tab
-        ArrayList<String> tabs = new ArrayList<String>(driver.getWindowHandles());
-        driver.switchTo().window(tabs.get(1));
+//        //navigate to SC all page
+        driver.navigate().to("https://test1.z2data.com/alerts/SCRisk/AllEvents?dType=1&sType=PLM");
 
         Thread.sleep(3000);
 
-        //accept popup message
-        driver.switchTo().alert().accept();
+        //open impact card side panel
+        driver.findElement(By.xpath("/html/body/app-root/div[3]/app-eventscontainer/div/div[2]/ng-component/events-views-container/div/div[2]/events-card-view-container/div/div/div/app-incard-event-details/div/impact-cards/div/div[2]/div[2]/div/div[2]/div/app-z2rendercomponent/app-z2textcomponent/div")).click();
+
+        Thread.sleep(3000);Thread.sleep(3000);
+
+        //get pagination count
+        String count = driver.findElement(By.xpath("/html/body/div[1]/div/div/div[2]/app-group-impact/div/div/div[1]/div[1]/div[2]/app-z2pagination/div/span/span[2]")).getText();
+
+        System.out.println("the count number :: "+count);
+
 
         Thread.sleep(8000);
 

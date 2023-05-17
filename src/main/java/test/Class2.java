@@ -38,7 +38,7 @@ public class Class2 extends TestBase {
     }
 
     @Parameters({"page"})
-    @Test (dependsOnGroups = login)
+    @Test (dependsOnGroups = "login")
     public void Class_02_test_04(@Optional("default page") String page) {
         System.out.println("run test from :: "+page);
         System.out.println("class 02 test 04");
