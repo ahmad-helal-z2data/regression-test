@@ -74,31 +74,31 @@ public class z2 {
         catch (Exception e){}
 
 
-        //navigate no SC events dashboard
-//        driver.navigate().to("https://test1.z2data.com/alerts/SCRisk/scdashboard?dType=1&sType=PLM");
+
+//        //navigate to SC all page
+//        driver.navigate().to("https://test1.z2data.com/alerts/SCRisk/AllEvents?dType=1&sType=PLM");
 
 
-
-        //navigate to dashboard page
-        driver.navigate().to("https://test1.z2data.com/alerts/SCRisk/scdashboard?dType=1&sType=PLM");
 
         //navigate no SC events dashboard
         driver.navigate().to("https://test1.z2data.com/alerts/SCRisk/scdashboard?dType=1&sType=PLM");
 
         Thread.sleep(3000);
 
-        //open event details
-        driver.findElement(By.xpath("//*[@id=\"z2-2cols-sub-2cols-right\"]/app-sc-dashboard-events/div/div[2]/events-card-view-listing/div/div/div/div[2]/div[2]/div[2]/div[1]/span")).click();
+        //open tracker new tab
+        driver.findElement(By.xpath("/html/body/app-root/div[3]/app-eventscontainer/div/div[2]/app-scto-events-dashboard/div/div[1]/app-sc-dashboard-trackers/div/div[2]/div/div[2]/div/app-z2-table/div/div/table/tbody/tr[1]/td[1]/app-z2redirecturlcomponent/a/span")).click();
 
-        //navigate to SC all page
-        driver.navigate().to("https://test1.z2data.com/alerts/SCRisk/AllEvents?dType=1&sType=PLM");
+        //switch to new tab
+        ArrayList<String> tabs = new ArrayList<String>(driver.getWindowHandles());
+        driver.switchTo().window(tabs.get(1));
 
-        actions.moveToElement(driver.findElement(xpath("\"//*[@id=\\\"Commodity5\\\"]\""))).click().build().perform();
-        actions.moveToElement(driver.findElement(xpath("\"//*[@id=\\\"chk_1commodity.commodity_Capacitor_5_0\\\"]\""))).click().build().perform();
+        Thread.sleep(3000);
+
+        //accept popup message
+        driver.switchTo().alert().accept();
+
         Thread.sleep(8000);
 
-        driver.findElement(xpath("//*[@id=\"z2-2cols-sub-2cols-left\"]/impact-cards/div/div[2]/div[3]/div")).click();
-        Thread.sleep(8000);
 
 
 
