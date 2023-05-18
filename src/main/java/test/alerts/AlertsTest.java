@@ -1,11 +1,12 @@
-package test;
+package test.alerts;
 
 import org.testng.Assert;
 import org.testng.annotations.Optional;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
+import test.TestBase;
 
-public class Class2 extends TestBase {
+public class AlertsTest extends TestBase {
 //    @Parameters({"page"})
 //    @Test
 //    public void navigate_to_page(String page) {

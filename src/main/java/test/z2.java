@@ -80,7 +80,7 @@ public class z2 {
 
 
         //navigate no SC events dashboard
-        driver.navigate().to("https://test1.z2data.com/alerts/SCRisk/scdashboard?dType=1&sType=PLM");
+//        driver.navigate().to("https://test1.z2data.com/alerts/SCRisk/scdashboard?dType=1&sType=PLM");
 
         Thread.sleep(3000);
 
@@ -94,10 +94,11 @@ public class z2 {
 
         Thread.sleep(3000);Thread.sleep(3000);
 
-        //get pagination count
-        String count = driver.findElement(By.xpath("/html/body/div[1]/div/div/div[2]/app-group-impact/div/div/div[1]/div[1]/div[2]/app-z2pagination/div/span/span[2]")).getText();
-
-        System.out.println("the count number :: "+count);
+        //search
+        driver.findElement(By.xpath("//*[@id=\"ngb-nav-7-panel\"]/div[1]/div[1]/app-ddlfiltersv2/div[1]/div/div/div/div/div[1]")).click();
+        Thread.sleep(3000);
+        driver.findElement(By.xpath("/html/body/div[1]/div/div/div[2]/app-group-impact/div/div/div[1]/div[1]/div[1]/app-ddlfiltersv2/div[1]/div/div/div/div/div[1]/button/div[2]/input")).sendKeys("jhjhjh");
+        driver.findElement(By.xpath("/html/body/div[1]/div/div/div[2]/app-group-impact/div/div/div[1]/div[1]/div[1]/app-ddlfiltersv2/div[1]/div/div/div/div/div[1]/button/div[2]/input")).sendKeys(Keys.ENTER);
 
 
         Thread.sleep(8000);
