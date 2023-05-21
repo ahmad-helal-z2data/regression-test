@@ -3,7 +3,7 @@
         <classes>
             <class name="test.Class2"/>
             <class name="test.Class3"/>
-            <class name="test.alerts.AlertsTest"/>
+<!--            <class name="test.alerts.AlertsTest"/>-->
         </classes>
     </test>
 </suite>

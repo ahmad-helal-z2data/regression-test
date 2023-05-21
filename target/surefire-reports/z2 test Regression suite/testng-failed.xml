@@ -3,21 +3,16 @@
 <suite name="Failed suite [z2 test Regression suite]" verbose="0">
   <test thread-count="5" name="Regression test(failed)" verbose="0">
     <classes>
-      <class name="test.Class3">
-        <methods>
-          <include name="Class_03_test_04"/>
-        </methods>
-      </class> <!-- test.Class3 -->
-      <class name="test.Class2">
-        <methods>
-          <include name="Class_02_test_04"/>
-        </methods>
-      </class> <!-- test.Class2 -->
       <class name="test.Class4">
         <methods>
           <include name="Class_04_test_04"/>
         </methods>
       </class> <!-- test.Class4 -->
+      <class name="test.Main3">
+        <methods>
+          <include name="Class_1_test_1"/>
+        </methods>
+      </class> <!-- test.Main3 -->
     </classes>
   </test> <!-- Regression test(failed) -->
 </suite> <!-- Failed suite [z2 test Regression suite] -->
