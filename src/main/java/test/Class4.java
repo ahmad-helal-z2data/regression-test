@@ -7,6 +7,8 @@ public class Class4 {
     @Test
     public void Class_04_test_01() {
         Assert.assertTrue(true);
+        boolean bo = false;
+
     }
 
     @Test
